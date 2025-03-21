@@ -1,0 +1,46 @@
+Polymorphism Theory:
+
+Polymorphism in Java is the ability of an object, method, or function to take many forms. 
+It allows the same method name to perform different tasks based on the object or input.
+
+Types of polymorphism:
+1.Compile time polymorphism
+2.Runtime polymorphism
+
+1.Compile time polymorphism (Static polymorphism):
+Achieved using Method Overloading.
+Decision happens during compilation.
+
+Compile-Time Polymorphism occurs when the method to be called is determined at compile time.
+It is achieved through method overloading
+
+Method Overloading:
+When multiple methods have the same name but different parameters (number, type, or order), it is called method overloading.
+Example: Pizza.java (Check Code in this folder)
+
+Run-Time Polymorphism occurs when the method to be called is determined at runtime. It is achieved through method overriding, 
+where a subclass provides a specific implementation of a method already defined in the superclass.
+
+Why to use:
+Improve Code readability.
+Makes code more flexible.
+
+Important Rules:
+
+Method name must be same.
+Parameters must differ in type, order, or number.
+Return type does NOT matter for overloading.
+Ex: 
+class Test {
+    int show() {
+        return 10;
+    }
+
+    double show() { // ❌ Error! Only return type is different
+        return 10.5;
+    }
+}
+
+Why?
+If you call show(), Java won’t know whether to use the int version or double version—it gets confused.
+
